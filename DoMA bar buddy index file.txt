@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DoMA Bar Buddy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>DoMA Bar Buddy</h1>
+
+  <div class="grid">
+    <img src="1.jpg" alt="Cocktail 1" />
+    <img src="2.jpg" alt="Cocktail 2" />
+    <img src="3.jpg" alt="Cocktail 3" />
+    <img src="4.jpg" alt="Cocktail 4" />
+    <img src="5.jpg" alt="Cocktail 5" />
+    <img src="6.jpg" alt="Cocktail 6" />
+    <img src="7.jpg" alt="Cocktail 7" />
+    <img src="8.jpg" alt="Cocktail 8" />
+    <img src="9.jpg" alt="Cocktail 9" />
+    <img src="10.jpg" alt="Cocktail 10" />
+
+    <!-- keep going for all your jpgs -->
+  </div>
+</body>
+</html>
