@@ -33,12 +33,12 @@
         -webkit-overflow-scrolling: touch;
       }
 
-      /* Hide scrollbar on WebKit browsers */
+      /* Hide scrollbar on WebKit */
       .slider::-webkit-scrollbar {
         display: none;
       }
 
-      /* Each slide (image) */
+      /* Each slide (full-screen image) */
       .slider img {
         object-fit: contain; /* show full image without cropping */
         width: 100vw;
@@ -47,86 +47,63 @@
         background: #000;
         flex-shrink: 0;
       }
-
-      /* Small overlay hint at bottom */
-      .hint {
-        position: fixed;
-        left: 50%;
-        bottom: 12px;
-        transform: translateX(-50%);
-        padding: 6px 10px;
-        border-radius: 999px;
-        font-size: 0.75rem;
-        background: rgba(15, 23, 42, 0.8);
-        color: #e5e7eb;
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        pointer-events: none;
-      }
-
-      @media (min-width: 768px) {
-        .hint {
-          font-size: 0.8rem;
-        }
-      }
     </style>
   </head>
 
   <body>
     <div class="slider">
-      <img src="1.jpg" alt="Cocktail 1" />
-      <img src="2.jpg" alt="Cocktail 2" />
-      <img src="3.jpg" alt="Cocktail 3" />
-      <img src="4.jpg" alt="Cocktail 4" />
-      <img src="5.jpg" alt="Cocktail 5" />
-      <img src="6.jpg" alt="Cocktail 6" />
-      <img src="7.jpg" alt="Cocktail 7" />
-      <img src="8.jpg" alt="Cocktail 8" />
-      <img src="9.jpg" alt="Cocktail 9" />
-      <img src="10.jpg" alt="Cocktail 10" />
-      <img src="11.jpg" alt="Cocktail 11" />
-      <img src="12.jpg" alt="Cocktail 12" />
-      <img src="13.jpg" alt="Cocktail 13" />
-      <img src="14.jpg" alt="Cocktail 14" />
-      <img src="15.jpg" alt="Cocktail 15" />
-      <img src="16.jpg" alt="Cocktail 16" />
-      <img src="17.jpg" alt="Cocktail 17" />
-      <img src="18.jpg" alt="Cocktail 18" />
-      <img src="19.jpg" alt="Cocktail 19" />
-      <img src="20.jpg" alt="Cocktail 20" />
-      <img src="21.jpg" alt="Cocktail 21" />
-      <img src="22.jpg" alt="Cocktail 22" />
-      <img src="23.jpg" alt="Cocktail 23" />
-      <img src="24.jpg" alt="Cocktail 24" />
-      <img src="25.jpg" alt="Cocktail 25" />
-      <img src="26.jpg" alt="Cocktail 26" />
-      <img src="27.jpg" alt="Cocktail 27" />
-      <img src="28.jpg" alt="Cocktail 28" />
-      <img src="29.jpg" alt="Cocktail 29" />
-      <img src="30.jpg" alt="Cocktail 30" />
-      <img src="31.jpg" alt="Cocktail 31" />
-      <img src="32.jpg" alt="Cocktail 32" />
-      <img src="33.jpg" alt="Cocktail 33" />
-      <img src="34.jpg" alt="Cocktail 34" />
-      <img src="35.jpg" alt="Cocktail 35" />
-      <img src="36.jpg" alt="Cocktail 36" />
-      <img src="37.jpg" alt="Cocktail 37" />
-      <img src="38.jpg" alt="Cocktail 38" />
-      <img src="39.jpg" alt="Cocktail 39" />
-      <img src="40.jpg" alt="Cocktail 40" />
-      <img src="41.jpg" alt="Cocktail 41" />
-      <img src="42.jpg" alt="Cocktail 42" />
-      <img src="43.jpg" alt="Cocktail 43" />
-      <img src="44.jpg" alt="Cocktail 44" />
-      <img src="45.jpg" alt="Cocktail 45" />
-      <img src="46.jpg" alt="Cocktail 46" />
-      <img src="47.jpg" alt="Cocktail 47" />
-      <img src="48.jpg" alt="Cocktail 48" />
-      <img src="49.jpg" alt="Cocktail 49" />
-      <img src="50.jpg" alt="Cocktail 50" />
-      <img src="51.jpg" alt="Cocktail 51" />
+      <img src="1.jpg" alt="Bar Buddy 1" />
+      <img src="2.jpg" alt="Bar Buddy 2" />
+      <img src="3.jpg" alt="Bar Buddy 3" />
+      <img src="4.jpg" alt="Bar Buddy 4" />
+      <img src="5.jpg" alt="Bar Buddy 5" />
+      <img src="6.jpg" alt="3 Little Birds" />
+      <img src="7.jpg" alt="3 Little Birds recipe" />
+      <img src="8.jpg" alt="As if to Nothing" />
+      <img src="9.jpg" alt="As if to Nothin recipe" />
+      <img src="10.jpg" alt="Black Manhattan" />
+      <img src="11.jpg" alt="Black Manhattan recipe" />
+      <img src="12.jpg" alt="Ceremony" />
+      <img src="13.jpg" alt="Ceremony recipe" />
+      <img src="14.jpg" alt="Crimson and Clover" />
+      <img src="15.jpg" alt="Crimson and Clover recipe" />
+      <img src="16.jpg" alt="Don't Let Me Down" />
+      <img src="17.jpg" alt="Don't Let Me Down recipe" />
+      <img src="18.jpg" alt="Fistful of Rupees" />
+      <img src="19.jpg" alt="Fistful of Rupees recipe" />
+      <img src="20.jpg" alt="Follow Your Arrow" />
+      <img src="21.jpg" alt="Follow Your Arrow recipe" />
+      <img src="22.jpg" alt="Gimme the Light" />
+      <img src="23.jpg" alt="Gimme the Light recipe" />
+      <img src="24.jpg" alt="Hot to Go" />
+      <img src="25.jpg" alt="Hot to Go recipe" />
+      <img src="26.jpg" alt="International Lover" />
+      <img src="27.jpg" alt="International Lover recipe" />
+      <img src="28.jpg" alt="Jardin du Luxembourg" />
+      <img src="29.jpg" alt="Jardin du Luxembourg recipe" />
+      <img src="30.jpg" alt="Melissa" />
+      <img src="31.jpg" alt="Melissa recipe" />
+      <img src="32.jpg" alt="Meteora" />
+      <img src="33.jpg" alt="Meteora recipe" />
+      <img src="34.jpg" alt="No Sleep Till" />
+      <img src="35.jpg" alt="No Sleep Till recipe" />
+      <img src="36.jpg" alt="Old Fashioned" />
+      <img src="37.jpg" alt="Old Fashioned recipe" />
+      <img src="38.jpg" alt="Orange Moon" />
+      <img src="39.jpg" alt="Orange Moon recipe" />
+      <img src="40.jpg" alt="Pineapple Express" />
+      <img src="41.jpg" alt="Pineapple Express recipe" />
+      <img src="42.jpg" alt="Shiso High (Above Me)" />
+      <img src="43.jpg" alt="Shiso High (Above Me) recipe" />
+      <img src="44.jpg" alt="So Fresh, So Clean" />
+      <img src="45.jpg" alt="So Fresh, So Clean recipe" />
+      <img src="46.jpg" alt="The Teacup" />
+      <img src="47.jpg" alt="The Teacup recipe" />
+      <img src="48.jpg" alt="Trinidad Sour" />
+      <img src="49.jpg" alt="Trinidad Sour recipe" />
+      <img src="50.jpg" alt="Whiskey Sour" />
+      <img src="51.jpg" alt="Whiskey Sour recipe" />
     </div>
-
-    <div class="hint">Swipe left/right to change cocktails</div>
   </body>
 </html>
+
