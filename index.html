@@ -1,306 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>DoMA Bar Buddy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      color-scheme: light dark;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>DoMA Bar Buddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    * {
-      box-sizing: border-box;
-    }
+    <style>
+      :root {
+        color-scheme: dark;
+      }
 
-    body {
-      margin: 0;
-      padding: 1.5rem;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background: #111827;
-      color: #f9fafb;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    .page {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+      body {
+        margin: 0;
+        background: #000;
+        overflow: hidden;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
 
-    header {
-      margin-bottom: 1.5rem;
-    }
+      /* Horizontal scrolling slider */
+      .slider {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        width: 100vw;
+        height: 100vh;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+      }
 
-    h1 {
-      margin: 0 0 0.5rem;
-      font-size: 2rem;
-    }
+      /* Hide scrollbar on WebKit browsers */
+      .slider::-webkit-scrollbar {
+        display: none;
+      }
 
-    p {
-      margin: 0.25rem 0;
-      color: #e5e7eb;
-    }
+      /* Each slide (image) */
+      .slider img {
+        object-fit: contain; /* show full image without cropping */
+        width: 100vw;
+        height: 100vh;
+        scroll-snap-align: start;
+        background: #000;
+        flex-shrink: 0;
+      }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.5rem;
-    }
+      /* Small overlay hint at bottom */
+      .hint {
+        position: fixed;
+        left: 50%;
+        bottom: 12px;
+        transform: translateX(-50%);
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        background: rgba(15, 23, 42, 0.8);
+        color: #e5e7eb;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        pointer-events: none;
+      }
 
-    .card {
-      background: #020617;
-      border-radius: 1rem;
-      padding: 0.75rem;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
-      border: 1px solid rgba(148, 163, 184, 0.2);
-      transition: transform 0.15s ease, box-shadow 0.15s ease,
-        border-color 0.15s ease;
-    }
+      @media (min-width: 768px) {
+        .hint {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-      border-color: rgba(248, 250, 252, 0.5);
-    }
+  <body>
+    <div class="slider">
+      <img src="1.jpg" alt="Cocktail 1" />
+      <img src="2.jpg" alt="Cocktail 2" />
+      <img src="3.jpg" alt="Cocktail 3" />
+      <img src="4.jpg" alt="Cocktail 4" />
+      <img src="5.jpg" alt="Cocktail 5" />
+      <img src="6.jpg" alt="Cocktail 6" />
+      <img src="7.jpg" alt="Cocktail 7" />
+      <img src="8.jpg" alt="Cocktail 8" />
+      <img src="9.jpg" alt="Cocktail 9" />
+      <img src="10.jpg" alt="Cocktail 10" />
+      <img src="11.jpg" alt="Cocktail 11" />
+      <img src="12.jpg" alt="Cocktail 12" />
+      <img src="13.jpg" alt="Cocktail 13" />
+      <img src="14.jpg" alt="Cocktail 14" />
+      <img src="15.jpg" alt="Cocktail 15" />
+      <img src="16.jpg" alt="Cocktail 16" />
+      <img src="17.jpg" alt="Cocktail 17" />
+      <img src="18.jpg" alt="Cocktail 18" />
+      <img src="19.jpg" alt="Cocktail 19" />
+      <img src="20.jpg" alt="Cocktail 20" />
+      <img src="21.jpg" alt="Cocktail 21" />
+      <img src="22.jpg" alt="Cocktail 22" />
+      <img src="23.jpg" alt="Cocktail 23" />
+      <img src="24.jpg" alt="Cocktail 24" />
+      <img src="25.jpg" alt="Cocktail 25" />
+      <img src="26.jpg" alt="Cocktail 26" />
+      <img src="27.jpg" alt="Cocktail 27" />
+      <img src="28.jpg" alt="Cocktail 28" />
+      <img src="29.jpg" alt="Cocktail 29" />
+      <img src="30.jpg" alt="Cocktail 30" />
+      <img src="31.jpg" alt="Cocktail 31" />
+      <img src="32.jpg" alt="Cocktail 32" />
+      <img src="33.jpg" alt="Cocktail 33" />
+      <img src="34.jpg" alt="Cocktail 34" />
+      <img src="35.jpg" alt="Cocktail 35" />
+      <img src="36.jpg" alt="Cocktail 36" />
+      <img src="37.jpg" alt="Cocktail 37" />
+      <img src="38.jpg" alt="Cocktail 38" />
+      <img src="39.jpg" alt="Cocktail 39" />
+      <img src="40.jpg" alt="Cocktail 40" />
+      <img src="41.jpg" alt="Cocktail 41" />
+      <img src="42.jpg" alt="Cocktail 42" />
+      <img src="43.jpg" alt="Cocktail 43" />
+      <img src="44.jpg" alt="Cocktail 44" />
+      <img src="45.jpg" alt="Cocktail 45" />
+      <img src="46.jpg" alt="Cocktail 46" />
+      <img src="47.jpg" alt="Cocktail 47" />
+      <img src="48.jpg" alt="Cocktail 48" />
+      <img src="49.jpg" alt="Cocktail 49" />
+      <img src="50.jpg" alt="Cocktail 50" />
+      <img src="51.jpg" alt="Cocktail 51" />
+    </div>
 
-    .card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 0.75rem;
-    }
-
-    .card-footer {
-      margin-top: 0.5rem;
-      font-size: 0.85rem;
-      color: #cbd5f5;
-      text-align: right;
-      opacity: 0.8;
-    }
-  </style>
-</head>
-<body>
-  <div class="page">
-    <header>
-      <h1>DoMA Bar Buddy</h1>
-      <p>
-        An evolving collection of our favorite cocktails inspired by Distillery
-        of Modern Art spirits and crafted by our talented bar team.
-      </p>
-      <p style="font-size: 0.9rem; opacity: 0.7;">
-        Tap any card to zoom; use your browser’s zoom or full-screen to make
-        the menu easier to read at the bar.
-      </p>
-    </header>
-
-    <section class="grid">
-      <!-- One card per image in the repo -->
-      <div class="card">
-        <img src="1.jpg" alt="Cocktail 1" />
-        <div class="card-footer">#1</div>
-      </div>
-      <div class="card">
-        <img src="2.jpg" alt="Cocktail 2" />
-        <div class="card-footer">#2</div>
-      </div>
-      <div class="card">
-        <img src="3.jpg" alt="Cocktail 3" />
-        <div class="card-footer">#3</div>
-      </div>
-      <div class="card">
-        <img src="4.jpg" alt="Cocktail 4" />
-        <div class="card-footer">#4</div>
-      </div>
-      <div class="card">
-        <img src="5.jpg" alt="Cocktail 5" />
-        <div class="card-footer">#5</div>
-      </div>
-      <div class="card">
-        <img src="6.jpg" alt="Cocktail 6" />
-        <div class="card-footer">#6</div>
-      </div>
-      <div class="card">
-        <img src="7.jpg" alt="Cocktail 7" />
-        <div class="card-footer">#7</div>
-      </div>
-      <div class="card">
-        <img src="8.jpg" alt="Cocktail 8" />
-        <div class="card-footer">#8</div>
-      </div>
-      <div class="card">
-        <img src="9.jpg" alt="Cocktail 9" />
-        <div class="card-footer">#9</div>
-      </div>
-      <div class="card">
-        <img src="10.jpg" alt="Cocktail 10" />
-        <div class="card-footer">#10</div>
-      </div>
-      <div class="card">
-        <img src="11.jpg" alt="Cocktail 11" />
-        <div class="card-footer">#11</div>
-      </div>
-      <div class="card">
-        <img src="12.jpg" alt="Cocktail 12" />
-        <div class="card-footer">#12</div>
-      </div>
-      <div class="card">
-        <img src="13.jpg" alt="Cocktail 13" />
-        <div class="card-footer">#13</div>
-      </div>
-      <div class="card">
-        <img src="14.jpg" alt="Cocktail 14" />
-        <div class="card-footer">#14</div>
-      </div>
-      <div class="card">
-        <img src="15.jpg" alt="Cocktail 15" />
-        <div class="card-footer">#15</div>
-      </div>
-      <div class="card">
-        <img src="16.jpg" alt="Cocktail 16" />
-        <div class="card-footer">#16</div>
-      </div>
-      <div class="card">
-        <img src="17.jpg" alt="Cocktail 17" />
-        <div class="card-footer">#17</div>
-      </div>
-      <div class="card">
-        <img src="18.jpg" alt="Cocktail 18" />
-        <div class="card-footer">#18</div>
-      </div>
-      <div class="card">
-        <img src="19.jpg" alt="Cocktail 19" />
-        <div class="card-footer">#19</div>
-      </div>
-      <div class="card">
-        <img src="20.jpg" alt="Cocktail 20" />
-        <div class="card-footer">#20</div>
-      </div>
-      <div class="card">
-        <img src="21.jpg" alt="Cocktail 21" />
-        <div class="card-footer">#21</div>
-      </div>
-      <div class="card">
-        <img src="22.jpg" alt="Cocktail 22" />
-        <div class="card-footer">#22</div>
-      </div>
-      <div class="card">
-        <img src="23.jpg" alt="Cocktail 23" />
-        <div class="card-footer">#23</div>
-      </div>
-      <div class="card">
-        <img src="24.jpg" alt="Cocktail 24" />
-        <div class="card-footer">#24</div>
-      </div>
-      <div class="card">
-        <img src="25.jpg" alt="Cocktail 25" />
-        <div class="card-footer">#25</div>
-      </div>
-      <div class="card">
-        <img src="26.jpg" alt="Cocktail 26" />
-        <div class="card-footer">#26</div>
-      </div>
-      <div class="card">
-        <img src="27.jpg" alt="Cocktail 27" />
-        <div class="card-footer">#27</div>
-      </div>
-      <div class="card">
-        <img src="28.jpg" alt="Cocktail 28" />
-        <div class="card-footer">#28</div>
-      </div>
-      <div class="card">
-        <img src="29.jpg" alt="Cocktail 29" />
-        <div class="card-footer">#29</div>
-      </div>
-      <div class="card">
-        <img src="30.jpg" alt="Cocktail 30" />
-        <div class="card-footer">#30</div>
-      </div>
-      <div class="card">
-        <img src="31.jpg" alt="Cocktail 31" />
-        <div class="card-footer">#31</div>
-      </div>
-      <div class="card">
-        <img src="32.jpg" alt="Cocktail 32" />
-        <div class="card-footer">#32</div>
-      </div>
-      <div class="card">
-        <img src="33.jpg" alt="Cocktail 33" />
-        <div class="card-footer">#33</div>
-      </div>
-      <div class="card">
-        <img src="34.jpg" alt="Cocktail 34" />
-        <div class="card-footer">#34</div>
-      </div>
-      <div class="card">
-        <img src="35.jpg" alt="Cocktail 35" />
-        <div class="card-footer">#35</div>
-      </div>
-      <div class="card">
-        <img src="36.jpg" alt="Cocktail 36" />
-        <div class="card-footer">#36</div>
-      </div>
-      <div class="card">
-        <img src="37.jpg" alt="Cocktail 37" />
-        <div class="card-footer">#37</div>
-      </div>
-      <div class="card">
-        <img src="38.jpg" alt="Cocktail 38" />
-        <div class="card-footer">#38</div>
-      </div>
-      <div class="card">
-        <img src="39.jpg" alt="Cocktail 39" />
-        <div class="card-footer">#39</div>
-      </div>
-      <div class="card">
-        <img src="40.jpg" alt="Cocktail 40" />
-        <div class="card-footer">#40</div>
-      </div>
-      <div class="card">
-        <img src="41.jpg" alt="Cocktail 41" />
-        <div class="card-footer">#41</div>
-      </div>
-      <div class="card">
-        <img src="42.jpg" alt="Cocktail 42" />
-        <div class="card-footer">#42</div>
-      </div>
-      <div class="card">
-        <img src="43.jpg" alt="Cocktail 43" />
-        <div class="card-footer">#43</div>
-      </div>
-      <div class="card">
-        <img src="44.jpg" alt="Cocktail 44" />
-        <div class="card-footer">#44</div>
-      </div>
-      <div class="card">
-        <img src="45.jpg" alt="Cocktail 45" />
-        <div class="card-footer">#45</div>
-      </div>
-      <div class="card">
-        <img src="46.jpg" alt="Cocktail 46" />
-        <div class="card-footer">#46</div>
-      </div>
-      <div class="card">
-        <img src="47.jpg" alt="Cocktail 47" />
-        <div class="card-footer">#47</div>
-      </div>
-      <div class="card">
-        <img src="48.jpg" alt="Cocktail 48" />
-        <div class="card-footer">#48</div>
-      </div>
-      <div class="card">
-        <img src="49.jpg" alt="Cocktail 49" />
-        <div class="card-footer">#49</div>
-      </div>
-      <div class="card">
-        <img src="50.jpg" alt="Cocktail 50" />
-        <div class="card-footer">#50</div>
-      </div>
-      <div class="card">
-        <img src="51.jpg" alt="Cocktail 51" />
-        <div class="card-footer">#51</div>
-      </div>
-    </section>
-  </div>
-</body>
+    <div class="hint">Swipe left/right to change cocktails</div>
+  </body>
 </html>
